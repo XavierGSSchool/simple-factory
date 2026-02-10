@@ -9,15 +9,15 @@ This system takes the temperature reading from either a digital temperature sens
 
 ## UML Diagrams
 ### Use Case Diagram
-![](Diagrams/useCaseDiagram.md)
+![](Diagrams/useCaseDiagram.png)
 ### Activity Diagram
-![](Diagrams/activityDiagram.md)
+![](Diagrams/activityDiagram.png)
 ### Sequence Diagram
-![](Diagrams/sequenceDiagram.md)
+![](Diagrams/sequenceDiagram.png)
 ### Class Diagram
-![](Diagrams/classDiagram.md)
+![](Diagrams/classDiagram.png)
 ### State Diagram
-![](Diagrams/stateDiagram.md)
+![](Diagrams/stateDiagram.png)
 
 ## Robustness Improvement Discussion
 In a scenario where a sensor read operation fails, instead of a reported failure with a swap to another available sensor, the system should:
