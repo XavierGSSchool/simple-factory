@@ -29,6 +29,7 @@ class FallbackTemperatureSensor(TemperatureSensor):
     
     # ONLY NEED THIS TO CLEAN UP DHT11 SENSOR
     def cleanup(self):
+        # bc I have this check here, in main i can always call this and will not have any problems
         if self._gpio_handle is not None:
             lgpio.gpiochip_close(self._gpio_handle)
             self._gpio_handle = None

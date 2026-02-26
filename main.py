@@ -11,12 +11,6 @@ def load_config(path="config.json"):
 config = load_config()
 sensor = SensorFactory.create_sensor(config)
 
-# define out sensor for exiting
-sensor_in_use = config.get("mode")
-
-# set flag for DHT sensor
-using_DHT = True if sensor_in_use == "dht11" else False
-
 # where we get the temp reading
 try:
     while True:
@@ -26,7 +20,5 @@ try:
             print(f"Reading: {temp_f}°F")
         time.sleep(0.1)
 except KeyboardInterrupt:
-    if(using_DHT):
-        # need to call function to clse DHT connection
-        sensor.cleanup()
+    sensor.cleanup()
     print("Exiting.")
